@@ -32,7 +32,7 @@ pub struct BundleRecommendedTips {
 
 impl BundleTipService {
     pub async fn get_tips_amount() -> Result<BundleRecommendedTips> {
-        let endpoint = "http://bundles-api-rest.jito.wtf/api/v1/bundles/tip_floor";
+        let endpoint = "https://bundles.jito.wtf/api/v1/bundles/tip_floor";
 
         let client = Client::new();
         let response = client.get(endpoint).send().await?;
